@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Música</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            /* Estilos personalizados */
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .jumbotron {
+                background-image: url("images/thumb_cordas-do-violao-2.jpg");
+                background-size: cover;
+                color: #ffffff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .jumbotron h1 {
+                font-size: 48px;
+                font-weight: bold;
+            }
+
+            .jumbotron p {
+                font-size: 24px;
+            }
+
+            .cta-button {
+                background-color: #007bff;
+                color: #ffffff;
+                font-size: 24px;
+                padding: 10px 20px;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+
+            .cta-button:hover {
+                background-color: #0056b3;
+            }
+
+            .card {
+                border-radius: 4px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .card img {
+                height: 200px;
+                object-fit: cover;
+                border-radius: 4px 4px 0 0;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .card-text {
+                font-size: 16px;
+                color: #6c757d;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container">
+                <a href="main-page" class="navbar-brand"><img src="images/newspaper.png" alt="Logo" width="50"></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#
+                           
+                           ">Futebol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Música</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carros</a>
+                    </li>
+                    </nav>
+                    <!-- Jumbotron -->
+                    <div class="jumbotron text-center">
+                        <h1 class="display-4">Página de Música</h1>
+                        <p class="lead">Bem-vindo(a) ao mundo da música!</p>
+                        <a href="#saiba-mais" class="cta-button">Saiba Mais</a>
+                    </div>
+
+                    <!-- Seção Sobre -->
+                    <section id="saiba-mais" class="container py-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Sobre a Música</h2>
+                                <p>A música é uma forma de arte que expressa emoções e sentimentos por meio de sons organizados. Ela desempenha um papel importante em várias culturas em todo o mundo e possui diversos gêneros e estilos.</p>
+                                <p>A música é uma forma de entretenimento, uma maneira de se expressar criativamente e também pode ter efeitos terapêuticos. Ela nos acompanha em diferentes momentos da vida e pode despertar diversas emoções.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="images/música.jpg" alt="Sobre a Música" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Seção Destaques -->
+                    <section id="destaques" class="container py-5">
+                        <h2 class="text-center mb-4">Destaques</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/pinkfloyd-original.webp" alt="Destaque 1" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Novo Álbum</h5>
+                                        <p class="card-text">Confira o mais recente álbum lançado por seu artista favorito e ouça as melhores músicas.</p>
+                                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/manoel-gomes.jpg" alt="Destaque 2" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Artista em Destaque</h5>
+                                        <p class="card-text">Descubra o talento do artista que está ganhando destaque no cenário musical.</p>
+                                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/música-antiga.png" alt="Destaque 3" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Playlist Curada</h5>
+                                        <p class="card-text">Explore uma playlist cuidadosamente selecionada com músicas de diferentes estilos e épocas.</p>
+                                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Rodapé -->
+                    <footer class="bg-dark text-white py-4 text-center">
+                        <p>Todos os direitos reservados &copy; 2023 | Página de Música</p>
+                    </footer>
+                    </body>
+                    </html>
