@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Davi Oliveira
  */
-@WebServlet(name = "Controller", urlPatterns = {"/Controller", "/login-page", "/main-page"})
+@WebServlet(name = "Controller", urlPatterns = {"/Controller", "/login-page", "/main-page", "/futebol-page"})
 public class Controller extends HttpServlet {
 
     /**
@@ -61,6 +61,10 @@ public class Controller extends HttpServlet {
         String action = request.getServletPath();
         if (action.equals("/main-page")) {
             response.sendRedirect("main-page.html");
+        }
+        
+        if (action.equals("/futebol-page")) {
+            response.sendRedirect("futebol-page.html");
         }
         
     }
