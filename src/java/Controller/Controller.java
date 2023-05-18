@@ -4,6 +4,7 @@
  */
 package Controller;
 
+import Authentication.Authenticator;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -74,7 +75,6 @@ public class Controller extends HttpServlet {
         if (action.equals("/car-page")) {
             response.sendRedirect("car-page.html");
         }
-        
     }
 
     /**
@@ -88,7 +88,11 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        
+        if (Authenticator.authenticate(username, password)) { request.getSession().setAttribute("username", username); response.sendRedirect("main-page.html"); }
+        else { response.sendRedirect("index.html?error=1"); }
     }
 
     /**
