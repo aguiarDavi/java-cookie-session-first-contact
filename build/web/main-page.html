@@ -25,6 +25,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <li class="nav-item">
                         <a class="nav-link" href="car-page">Carros</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">Deslogar</a>
+                    </li>
                     </nav>
                     <!-- Seção Futebol -->
                     <section id="futebol" class="py-5 bg-dark text-white text-center">
@@ -49,5 +52,61 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis bibendum diam a dictum. Sed finibus, ipsum sed posuere tristique, neque mi interdum mi, non egestas justo magna non turpis.</p>
                         </div>
                     </section>
-        </body>
-</html>
+
+                    <script>
+                        // Função para encontrar o cookie com o contador de acessos maior
+                        function getMostVisitedPage() {
+                            var cookies = document.cookie.split("; ");
+                            var pageCount = 0;
+                            var mostVisitedPage = "";
+
+                            cookies.forEach(function (cookie) {
+                                var parts = cookie.split("=");
+                                var name = parts[0];
+                                var value = parseInt(parts[1]);
+
+                                if (value && value > pageCount) {
+                                    pageCount = value;
+                                    mostVisitedPage = name;
+                                }
+                            });
+
+                            return mostVisitedPage;
+                        }
+
+                        // Função para exibir a mensagem "mais acessado" na sessão correspondente
+                        function showMostVisitedMessage() {
+                            var mostVisitedPage = getMostVisitedPage();
+
+                            if (mostVisitedPage === "mainPageCount") {
+                                var section = document.getElementById("futebol");
+                                var message = document.createElement("p");
+                                message.classList.add("lead", "text-danger");
+                                message.innerHTML = "Mais acessado";
+                                section.appendChild(message);
+                            } else if (mostVisitedPage === "futebolPageCount") {
+                                var section = document.getElementById("futebol");
+                                var message = document.createElement("p");
+                                message.classList.add("lead", "text-danger");
+                                message.innerHTML = "Mais acessado";
+                                section.appendChild(message);
+                            } else if (mostVisitedPage === "musicPageCount") {
+                                var section = document.getElementById("musica");
+                                var message = document.createElement("p");
+                                message.classList.add("lead", "text-danger");
+                                message.innerHTML = "Mais acessado";
+                                section.appendChild(message);
+                            } else if (mostVisitedPage === "carPageCount") {
+                                var section = document.getElementById("carros");
+                                var message = document.createElement("p");
+                                message.classList.add("lead", "text-danger");
+                                message.innerHTML = "Mais acessado";
+                                section.appendChild(message);
+                            }
+                        }
+
+                        // Chamar a função para exibir a mensagem
+                        showMostVisitedMessage();
+                    </script>
+                    </body>
+                    </html>

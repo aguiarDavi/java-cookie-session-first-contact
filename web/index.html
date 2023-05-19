@@ -12,18 +12,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         <div class="d-flex align-items-center justify-content-center text-center vh-100">
-            <form action="action">
+            <form action="loginAuthentication" method="post" >
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control">
+                    <input id="username" type="text" name="username" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control">
+                    <input id="password" type="password" name="password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-dark"> Submit </button>
+                <p id="error-message" style="margin-top: 10vh; color: red; font-weight: bold" ></p>
             </form>
         </div>
+                 
 
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const error = urlParams.get('error');
+
+                if (error === '1') {
+                    const errorMessage = document.getElementById('error-message');
+                    errorMessage.textContent = 'LOGIN OU SENHA INCORRETOS';
+                }
+            });
+        </script>
     </body>
 </html>
